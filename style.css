@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #dde1ed;
+}
+
+.container {
+  width: 430px;
+  height: 580px;
+  position: relative;
+}
+
+.container .form-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.container .sign-up {
+  transform: translateX(0) rotate(7deg) scale(1);
+}
+
+.form-container .form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.form h2 {
+  font-size: 27px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #292929;
+}
+
+.form .form-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  width: 80%;
+  height: 50px;
+  margin: 15px 0;
+}
+
+.form-group input {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 5px;
+  padding: 0 20px;
+  font-size: 17px;
+  font-weight: 500;
+  outline: none;
+  border: 1px solid black;
+}
+
+.form-group label {
+  position: absolute;
+  pointer-events: none;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  background: white;
+  transition: all 0.3 ease;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 3px;
+  color: #999;
+}
+
+.form-group label i {
+  margin-right: 5px;
+  color: black;
+}
+
+.form-group input:focus ~ label,
+.form-group input:valid ~ label {
+  color: black;
+  top: 0%;
+  transform: translateY(-50%) scale(0.85);
+}
+
+.form .forgot-pass {
+  width: 80%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.form .forgot-pass a {
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+  text-transform: capitalize;
+  transition: all 0.5s ease;
+}
+
+.form .forgot-pass a:hover {
+  color: #0082bc;
+  text-decoration: underline;
+}
+
+.form .btn {
+  width: 75%;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(315deg, #03a9f4, #0082bc);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+  border: 3px solid #edf1f4;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.form .btn:active {
+  transform: scale(0.95);
+}
+
+.fingerprintBtn {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+  border: 3px solid #edf1f4;
+  padding: 15px 20px 10px;
+  border-radius: 10px;
+  background: linear-gradient(315deg, #03a9f4, #0082bc);
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.fingerprintBtn img {
+  max-width: 50px;
+  filter: invert(1);
+  animation: animate 1s infinite;
+}
+@keyframes animate {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.form .link a {
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.form .link a label {
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.form .link a label:hover {
+  color: #0082bc;
+  cursor: pointer;
+}
+
+#slider-one:checked ~ .container .sign-in {
+  animation: signup-flip 1s ease-in-out forwards;
+}
+
+#slider-one:checked ~ .container .sign-up {
+  animation: rotatecard-sign-up 0.7s ease-in-out forwards;
+}
+
+#slider-two:checked ~ .container .sign-up {
+  animation: signin-flip 1s ease-in-out forwards;
+}
+
+#slider-two:checked ~ .container .sign-in {
+  animation: rotatecard-sign-in 0.7s ease-in-out forwards;
+}
+
+#slider-one,
+#slider-two {
+  display: none;
+}
+
+@keyframes signup-flip {
+  0% {
+    transform: translateX(0);
+    z-index: 1;
+  }
+
+  50% {
+    transform: translateX(600px) scale(1.1);
+  }
+
+  100% {
+    transform: translateX(0) rotate(7deg) scale(1);
+  }
+}
+
+@keyframes signin-flip {
+  0% {
+    transform: translateX(0);
+    z-index: 1;
+  }
+
+  50% {
+    transform: translateX(-600px) scale(1.1);
+  }
+
+  100% {
+    transform: translateX(0) rotate(7deg) scale(1);
+  }
+}
+
+@keyframes rotatecard-sign-up {
+  0% {
+    transform: rotate(7deg);
+  }
+
+  100% {
+    transform: rotate(0);
+    z-index: 1;
+  }
+}
+
+@keyframes rotatecard-sign-in {
+  0% {
+    transform: rotate(7deg);
+  }
+
+  100% {
+    transform: rotate(0);
+    z-index: 1;
+  }
+}
+
+footer {
+  position: absolute;
+  margin-top: 675px;
+}
+
+footer p {
+  font-size: 13px;
+}

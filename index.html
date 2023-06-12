@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Flibrary</title>
+    <!-- CSS code file -->
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/84cca7cdb2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <input type="radio" name="slider" id="slider-one" />
+    <input type="radio" name="slider" id="slider-two" />
+    <div class="container">
+      <!-- Daftar Akun -->
+      <div class="form-container sign-up">
+        <form action="#" class="form">
+          <img src="img/flibrarylogo.png" alt="" style="width: 185px" />
+          <div class="form-group">
+            <input type="text" required />
+            <label for=""><i class="fa-solid fa-user fa-xs"></i>Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" required />
+            <label for=""
+              ><i class="fa-solid fa-envelope fa-xs"></i>E-mail address</label
+            >
+          </div>
+          <div class="form-group">
+            <input type="password" required />
+            <label for=""><i class="fa-solid fa-lock fa-xs"></i>Password</label>
+          </div>
+          <div class="form-group">
+            <input type="password" required />
+            <label for=""
+              ><i class="fa-solid fa-lock fa-xs"></i>Confirm password</label
+            >
+          </div>
+          <button type="submit" class="btn">Sign up</button>
+          <div class="link">
+            <p>
+              Sudah memiliki akun?
+              <a href="#"><label for="slider-two">Masuk disini</label></a>
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <!-- Login Akun -->
+      <div class="form-container sign-in">
+        <form action="#" class="form" id="myForm">
+          <img src="img/flibrarylogo.png" alt="" style="width: 215px" />
+          <h2>login</h2>
+          <div class="form-group">
+            <input type="text" required />
+            <label for=""
+              ><i class="fa-solid fa-envelope fa-xs"></i>Username /
+              E-mail</label
+            >
+          </div>
+          <div class="form-group">
+            <input type="password" required />
+            <label for=""><i class="fa-solid fa-lock fa-xs"></i>Password</label>
+          </div>
+          <div class="forgot-pass">
+            <a href="">Forgot password?</a>
+          </div>
+          <!-- <button type="submit" class="btn">login</button> -->
+          <button class="fingerprintBtn">
+            <img src="img/fingerprint.png" />
+          </button>
+          <div class="link">
+            <p>
+              Belum memiliki akun?
+              <a href="#"><label for="slider-one">Daftar disini</label></a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer><p>© Copyright 2023 | Flibrary Indonesia</p></footer>
+  </body>
+</html>
